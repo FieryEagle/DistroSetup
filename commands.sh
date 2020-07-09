@@ -20,9 +20,8 @@ sudo apt-add-repository ppa:rodsmith/refind -y
 sudo apt update
 sudo apt install refind
 sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/bobafetthotmail/refind-theme-regular/master/install.sh)"
+fc-cache -rv
+cp -rf libinput-gestures.conf ./config/
 sudo apt upgrade -y
 sudo apt autoremove -y
-cd ~/Downloads
-wget https://www.cufonfonts.com/download/font/segoe-ui-4
-wget https://www.fontmirror.com/app_public/files/t/1/family_zip/2020/02/Times_New_Roman_Font_Family_(Fontmirror).zip
-wget https://www.cufonfonts.com/download/font/arial
+
