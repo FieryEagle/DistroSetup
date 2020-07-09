@@ -6,6 +6,9 @@ sudo make install
 git clone https://gitlab.com/cunidev/gestures.git
 cd ~/gestures
 sudo python3 setup.py install
+cp -rf libinput-gestures.conf ./config/
+ibinput-gestures-setup autostart
+libinput-gestures-setup start
 cd ~/
 sudo apt install neofetch ruby python3-pip stacer apt-transport-https curl ffmpegthumbnailer vlc dmz-cursor-theme discord gnome-tweaks qbittorrent speedtest-cli gstreamer1.0-libav -y
 apt-get purge firefox* -y
@@ -21,7 +24,5 @@ sudo apt update
 sudo apt install refind
 sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/bobafetthotmail/refind-theme-regular/master/install.sh)"
 fc-cache -rv
-cp -rf libinput-gestures.conf ./config/
 sudo apt upgrade -y
 sudo apt autoremove -y
-
