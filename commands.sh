@@ -1,16 +1,20 @@
-#Install gestures
+
+#Install libinput-gestures and dependencies
 
 gpasswd -a $USER input
 sudo apt-get install wmctrl python3 python3-setuptools xdotool python3-gi libinput-tools python-gobject -y
 git clone https://github.com/bulletmark/libinput-gestures.git
-
-#Install Libinput-gestures
-
 cd ~/libinput-gestures
 sudo make install
+
+#Install gestures
+
 git clone https://gitlab.com/cunidev/gestures.git
 cd ~/gestures
 sudo python3 setup.py install
+
+#Copy over config file and set libinput to start
+
 cp -rf libinput-gestures.conf ./config/
 ibinput-gestures-setup autostart
 libinput-gestures-setup start
