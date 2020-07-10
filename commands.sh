@@ -32,6 +32,14 @@ sudo apt install ~/google-chrome-stable_current_amd64.deb -y
 sudo apt install ~/teamviewer_amd64.deb -y
 sudo apt install ~/Minecraft.deb -y
 
+#Install Wine
+
+sudo dpkg --add-architecture i386
+wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
+sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
+sudo apt update
+sudo apt install --install-recommends winehq-stable
+
 #Installs rEFInd
 
 sudo apt-add-repository ppa:rodsmith/refind -y
@@ -45,5 +53,6 @@ fc-cache -rv
 
 #Janitor work
 
+sudo apt update
 sudo apt upgrade -y
 sudo apt autoremove -y
