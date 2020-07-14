@@ -18,10 +18,23 @@ cd ~/
 
 #Install common programs
 
-sudo apt update
+sudo apt-get update
 sudo apt-get purge firefox* -y
-sudo apt install neofetch ruby python3-pip stacer apt-transport-https curl ffmpegthumbnailer vlc dmz-cursor-theme discord gnome-tweaks qbittorrent speedtest-cli gstreamer1.0-libav -y
-sudo gem install lolcat -y
+sudo apt-get install neofetch 
+sudo apt-get install ruby -y
+sudo apt-get install python3-pip -y 
+sudo apt-get install stacer -y
+sudo apt-get install apt-transport-https -y 
+sudo apt-get install curl -y
+sudo apt-get install ffmpegthumbnailer -y 
+sudo apt-get install vlc -y
+sudo apt-get install dmz-cursor-theme -y 
+sudo apt-get install discord -y
+sudo apt-get install gnome-tweaks -y 
+sudo apt-get install qbittorrent -y
+sudo apt-get install speedtest-cli -y
+sudo apt-get install gstreamer1.0-libav -y
+sudo gem-get install lolcat -y
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
 wget https://launcher.mojang.com/download/Minecraft.deb
