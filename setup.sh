@@ -92,6 +92,9 @@ rm -rf ~/atom-amd64.deb
 rm -rf ~/DistroSetup
 rm -rf ~/.sudo_as_admin_successful
 rm -rf ~/.wget-hsts
+rm -rf ~/Orchis-theme
+rm -rf ~/Tela-icon-theme
+rm -rf ~/ChromeOS-theme
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get autoremove -y
