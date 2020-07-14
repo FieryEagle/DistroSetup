@@ -21,7 +21,7 @@ cd
 echo Installing programs
 sudo apt-get update
 sudo apt-get purge firefox* -y
-sudo apt-get install neofetch
+sudo apt-get install neofetch -y
 sudo apt-get install ruby -y
 sudo apt-get install python3-pip -y
 sudo apt-get install stacer -y
