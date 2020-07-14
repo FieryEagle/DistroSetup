@@ -5,7 +5,7 @@ Install instructions
 If you so desire to run code that is very personally designed for me, you'll need the following commands
 
 `git clone https://github.com/FieryEagle/DistroSetup.git`
-
+{Enter}
 `cp ~/Distrosetup/* ~/`
 
 `chmod ~/commands.sh`
