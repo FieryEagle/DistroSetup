@@ -1,15 +1,11 @@
+#Install Gestures
 
-#Install libinput-gestures and dependencies
-
-gpasswd -a $USER input
-sudo apt-get install wmctrl python3 python3-setuptools xdotool python3-gi libinput-tools python-gobject -y
+sudo gpasswd -a $USER input
 git clone https://github.com/bulletmark/libinput-gestures.git
+git clone https://gitlab.com/cunidev/gestures.git
+sudo apt-get install wmctrl python3 python3-setuptools xdotool python3-gi libinput-tools python-gobject
 cd ~/libinput-gestures
 sudo make install
-
-#Install gestures
-
-git clone https://gitlab.com/cunidev/gestures.git
 cd ~/gestures
 sudo python3 setup.py install
 
@@ -54,6 +50,7 @@ sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/bobafetthotmail/ref
 
 mv ~/DistroSetup/.fonts ~/
 fc-cache -rv
+rm -rf ~/DistroSetup
 
 #Janitor work
 
