@@ -82,6 +82,7 @@ cd
 git clone https://github.com/vinceliuice/ChromeOS-theme.git
 cd ~/ChromeOS-theme
 ./install.sh --color dark
+killall -SIGQUIT gnome-shell
 
 #Janitor
 echo Cleaning up...
