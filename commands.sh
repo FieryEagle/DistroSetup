@@ -50,10 +50,12 @@ sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/bobafetthotmail/ref
 
 mv ~/DistroSetup/.fonts ~/
 fc-cache -rv
-rm -rf ~/DistroSetup
 
 #Janitor work
 
+rm -rf ~/DistroSetup
+rm -rf ~/.sudo_as_admin_successful
+rm -rf ~/.wget-hsts
 sudo apt update
 sudo apt upgrade -y
 sudo apt autoremove -y
