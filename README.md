@@ -7,7 +7,7 @@ If you so desire to run code that is very personally designed for me, you'll nee
 `git clone https://github.com/FieryEagle/DistroSetup.git`
 
 
-`cp ~/Distrosetup/* ~/`
+`cp ~/DistroSetup/* ~/`
 
 
 `chmod +x ~/setup.sh`
