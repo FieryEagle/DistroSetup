@@ -35,15 +35,18 @@ sudo apt-get install qbittorrent -y
 sudo apt-get install speedtest-cli -y
 sudo apt-get install gstreamer1.0-libav -y
 sudo gem-get install lolcat -y
+wget https://atom.io/download/deb
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
 wget https://launcher.mojang.com/download/Minecraft.deb
 sudo apt install ~/google-chrome-stable_current_amd64.deb -y
 sudo apt install ~/teamviewer_amd64.deb -y
 sudo apt install ~/Minecraft.deb -y
+sudo apt install ~/atom-amd64.deb -y
 rm -rf ~/Minecraft.deb
 rm -rf ~/teamviewer_amd64.deb
 rm -rf ~/google-chrome-stable_current_amd64.deb
+rm -rf ~/atom-amd64.deb
 
 #Install Wine
 
