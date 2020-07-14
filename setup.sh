@@ -95,6 +95,7 @@ rm -rf ~/.wget-hsts
 rm -rf ~/Orchis-theme
 rm -rf ~/Tela-icon-theme
 rm -rf ~/ChromeOS-theme
+rm -rf ~/README.md
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get autoremove -y
