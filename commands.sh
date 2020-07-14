@@ -18,6 +18,7 @@ cd ~/
 
 #Install common programs
 
+sudo apt update
 sudo apt-get purge firefox* -y
 sudo apt install neofetch ruby python3-pip stacer apt-transport-https curl ffmpegthumbnailer vlc dmz-cursor-theme discord gnome-tweaks qbittorrent speedtest-cli gstreamer1.0-libav -y
 sudo gem install lolcat -y
