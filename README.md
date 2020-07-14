@@ -10,7 +10,7 @@ If you so desire to run code that is very personally designed for me, you'll nee
 `cp ~/Distrosetup/* ~/`
 
 
-`chmod +x ~/commands.sh`
+`chmod +x ~/setup.sh`
 
 
-`./commands.sh`
+`./setup.sh`
