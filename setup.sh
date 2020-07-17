@@ -88,7 +88,6 @@ cd ~/ChromeOS-theme
 gsettings set org.gnome.desktop.interface cursor-theme 'DMZ-White'
 gsettings set org.gnome.desktop.interface gtk-theme 'Orchis-dark'
 gsettings set org.gnome.desktop.interface icon-theme 'Tela-black-dark'
-killall -SIGQUIT gnome-shell
 
 #Janitor
 echo Cleaning up...
