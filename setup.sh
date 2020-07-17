@@ -94,16 +94,6 @@ gsettings set org.gnome.desktop.interface icon-theme 'Tela-black-dark'
 
 #Janitor
 echo Cleaning up...
-rm -rf ~/Minecraft.deb
-rm -rf ~/teamviewer_amd64.deb
-rm -rf ~/google-chrome-stable_current_amd64.deb
-rm -rf ~/DistroSetup
-rm -rf ~/.sudo_as_admin_successful
-rm -rf ~/.wget-hsts
-rm -rf ~/Orchis-theme
-rm -rf ~/Tela-icon-theme
-rm -rf ~/ChromeOS-theme
-rm -rf ~/README.md
 sudo apt-get update
 sudo apt-get upgrade -y
 echo Setup completed successfully
