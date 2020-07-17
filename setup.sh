@@ -41,15 +41,14 @@ sudo apt-get install gnome-tweaks -y
 sudo apt-get install qbittorrent -y
 sudo apt-get install speedtest-cli -y
 sudo apt-get install gstreamer1.0-libav -y
+sudo apt-get install atom -y
 sudo gem install lolcat -y
-wget https://atom.io/download/deb
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
-wget https://launcher.mojang.com/download/Minecraft.deb
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -q
+wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb -q
+wget https://launcher.mojang.com/download/Minecraft.deb -q
 sudo apt install ~/google-chrome-stable_current_amd64.deb -y
 sudo apt install ~/teamviewer_amd64.deb -y
 sudo apt install ~/Minecraft.deb -y
-sudo apt install ~/atom-amd64.deb -y
 
 #Install Wine
 echo Installing Wine
@@ -75,20 +74,20 @@ fc-cache -rv
 #Setup themes
 echo Setting up themes
 sudo apt-get install dmz-cursor-theme -y
-gsettings set org.gnome.desktop.interface cursor-theme 'DMZ-White'
 git clone https://github.com/vinceliuice/Orchis-theme.git
 cd ~/Orchis-theme
 ./install.sh
-gsettings set org.gnome.desktop.interface gtk-theme 'Orchis-dark'
 cd
 git clone https://github.com/vinceliuice/Tela-icon-theme.git
 cd ~/Tela-icon-theme
-./install.sh -n black
-gsettings set org.gnome.desktop.interface icon-theme 'Tela-black-dark'
+./install.sh -a
 cd
 git clone https://github.com/vinceliuice/ChromeOS-theme.git
 cd ~/ChromeOS-theme
 ./install.sh --color dark
+gsettings set org.gnome.desktop.interface cursor-theme 'DMZ-White'
+gsettings set org.gnome.desktop.interface gtk-theme 'Orchis-dark'
+gsettings set org.gnome.desktop.interface icon-theme 'Tela-black-dark'
 killall -SIGQUIT gnome-shell
 
 #Janitor
@@ -96,7 +95,6 @@ echo Cleaning up...
 rm -rf ~/Minecraft.deb
 rm -rf ~/teamviewer_amd64.deb
 rm -rf ~/google-chrome-stable_current_amd64.deb
-rm -rf ~/atom-amd64.deb
 rm -rf ~/DistroSetup
 rm -rf ~/.sudo_as_admin_successful
 rm -rf ~/.wget-hsts
@@ -110,6 +108,7 @@ sudo apt-get autoremove -y
 echo Setup completed successfully
 
 #GNOME-extensions
+google-chrome
 xdg-open https://vault.bitwarden.com
 xdg-open https://extensions.gnome.org/extension/517/caffeine/
 xdg-open https://extensions.gnome.org/extension/779/clipboard-indicator/
