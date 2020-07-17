@@ -36,7 +36,6 @@ sudo apt-get install apt-transport-https -y
 sudo apt-get install curl -y
 sudo apt-get install ffmpegthumbnailer -y
 sudo apt-get install vlc -y
-sudo apt-get install discord -y
 sudo apt-get install gnome-tweaks -y
 sudo apt-get install qbittorrent -y
 sudo apt-get install speedtest-cli -y
@@ -45,9 +44,11 @@ wget -q https://packagecloud.io/AtomEditor/atom/gpgkey -O- | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main"
 sudo apt-get install atom -y
 sudo gem install lolcat
+wget https://dl.discordapp.net/apps/linux/0.0.10/discord-0.0.10.deb -q
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -q
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb -q
 wget https://launcher.mojang.com/download/Minecraft.deb -q
+sudo apt install ~/discord-0.0.10.deb -y
 sudo apt install ~/google-chrome-stable_current_amd64.deb -y
 sudo apt install ~/teamviewer_amd64.deb -y
 sudo apt install ~/Minecraft.deb -y
