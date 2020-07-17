@@ -42,7 +42,7 @@ sudo apt-get install qbittorrent -y
 sudo apt-get install speedtest-cli -y
 sudo apt-get install gstreamer1.0-libav -y
 sudo apt-get install atom -y
-sudo gem install lolcat -y
+sudo gem install lolcat
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -q
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb -q
 wget https://launcher.mojang.com/download/Minecraft.deb -q
