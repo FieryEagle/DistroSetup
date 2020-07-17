@@ -1,3 +1,4 @@
+echo Setup started
 #Install Gestures
 echo Installing Gestures
 sudo gpasswd -a $USER input
