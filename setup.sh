@@ -105,15 +105,13 @@ rm -rf ~/ChromeOS-theme
 rm -rf ~/README.md
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt-get autoremove -y
 echo Setup completed successfully
 
 #GNOME-extensions
-google-chrome
-sudo update-alternatives --config x-www-browser
-sudo xdg-open https://vault.bitwarden.com
-sudo xdg-open https://extensions.gnome.org/extension/517/caffeine/
-sudo xdg-open https://extensions.gnome.org/extension/779/clipboard-indicator/
-sudo xdg-open https://extensions.gnome.org/extension/1160/dash-to-panel/
-sudo xdg-open https://extensions.gnome.org/extension/19/user-themes/
-sudo xdg-open https://extensions.gnome.org/extension/1460/vitals/
+python3 -m webbrowser https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep
+python3 -m webbrowser https://vault.bitwarden.com
+python3 -m webbrowser https://extensions.gnome.org/extension/517/caffeine/
+python3 -m webbrowser https://extensions.gnome.org/extension/779/clipboard-indicator/
+python3 -m webbrowser https://extensions.gnome.org/extension/1160/dash-to-panel/
+python3 -m webbrowser https://extensions.gnome.org/extension/19/user-themes/
+python3 -m webbrowser https://extensions.gnome.org/extension/1460/vitals/
