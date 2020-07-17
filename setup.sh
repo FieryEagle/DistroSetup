@@ -111,9 +111,9 @@ echo Setup completed successfully
 #GNOME-extensions
 google-chrome
 sudo update-alternatives --config x-www-browser
-xdg-open https://vault.bitwarden.com
-xdg-open https://extensions.gnome.org/extension/517/caffeine/
-xdg-open https://extensions.gnome.org/extension/779/clipboard-indicator/
-xdg-open https://extensions.gnome.org/extension/1160/dash-to-panel/
-xdg-open https://extensions.gnome.org/extension/19/user-themes/
-xdg-open https://extensions.gnome.org/extension/1460/vitals/
+sudo xdg-open https://vault.bitwarden.com
+sudo xdg-open https://extensions.gnome.org/extension/517/caffeine/
+sudo xdg-open https://extensions.gnome.org/extension/779/clipboard-indicator/
+sudo xdg-open https://extensions.gnome.org/extension/1160/dash-to-panel/
+sudo xdg-open https://extensions.gnome.org/extension/19/user-themes/
+sudo xdg-open https://extensions.gnome.org/extension/1460/vitals/
