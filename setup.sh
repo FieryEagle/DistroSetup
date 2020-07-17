@@ -5,7 +5,13 @@ sudo gpasswd -a $USER input
 git clone https://github.com/bulletmark/libinput-gestures.git
 git clone https://gitlab.com/cunidev/gestures.git
 sudo apt update
-sudo apt-get install wmctrl python3 python3-setuptools xdotool python3-gi libinput-tools python-gobject
+sudo apt-get install wmctrl -y
+sudo apt-get install python3 -y
+sudo apt-get install python3-setuptools -y
+sudo apt-get install xdotool -y
+sudo apt-get install python3-gi -y
+sudo apt-get install libinput-tools -y
+sudo apt-get install python-gobject -y
 cd ~/libinput-gestures
 sudo make install
 cd ~/gestures
