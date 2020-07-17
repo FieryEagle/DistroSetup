@@ -41,6 +41,8 @@ sudo apt-get install gnome-tweaks -y
 sudo apt-get install qbittorrent -y
 sudo apt-get install speedtest-cli -y
 sudo apt-get install gstreamer1.0-libav -y
+wget -q https://packagecloud.io/AtomEditor/atom/gpgkey -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main"
 sudo apt-get install atom -y
 sudo gem install lolcat
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -q
@@ -108,6 +110,7 @@ echo Setup completed successfully
 
 #GNOME-extensions
 google-chrome
+sudo update-alternatives --config x-www-browser
 xdg-open https://vault.bitwarden.com
 xdg-open https://extensions.gnome.org/extension/517/caffeine/
 xdg-open https://extensions.gnome.org/extension/779/clipboard-indicator/
