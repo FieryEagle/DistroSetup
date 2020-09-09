@@ -1,6 +1,7 @@
 echo Setup started
 #Install Gestures
 sudo gpasswd -a $USER input
+cd ~/DistroSetup
 git clone https://github.com/bulletmark/libinput-gestures.git
 git clone https://gitlab.com/cunidev/gestures.git
 sudo apt update
@@ -11,20 +12,23 @@ sudo apt-get install xdotool -y
 sudo apt-get install python3-gi -y
 sudo apt-get install libinput-tools -y
 sudo apt-get install python-gobject -y
-cd ~/libinput-gestures
+cd ~
+cd ~/DistroSetup/libinput-gestures
+cd ~
 sudo make install
-cd ~/gestures
+cd ~/DistroSetup/gestures
+cd ~
 sudo python3 setup.py install
 libinput-gestures-setup autostart
 libinput-gestures-setup start
 
 #Copy over config file and set libinput to start
-mv ~/libinput-gestures.conf ~/.config/
-ibinput-gestures-setup autostart
+mv ~/DistroSetup/libinput-gestures.conf ~/.config/
+libinput-gestures-setup autostart
 libinput-gestures-setup start
-cd
 
 #Install common programs
+cd ~/DistroSetup/
 sudo apt-get update
 sudo apt-get purge firefox* -y
 sudo apt-get install neofetch -y
@@ -47,18 +51,40 @@ wget https://dl.discordapp.net/apps/linux/0.0.10/discord-0.0.10.deb -q
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -q
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb -q
 wget https://launcher.mojang.com/download/Minecraft.deb -q
-sudo apt install ~/discord-0.0.10.deb -y
-sudo apt install ~/google-chrome-stable_current_amd64.deb -y
-sudo apt install ~/teamviewer_amd64.deb -y
-sudo apt install ~/Minecraft.deb -y
+sudo apt install ~/DistroSetup/discord-0.0.10.deb -y
+sudo apt install ~/DistroSetup/google-chrome-stable_current_amd64.deb -y
+sudo apt install ~/DistroSetup/teamviewer_amd64.deb -y
+sudo apt install ~/DistroSetup/Minecraft.deb -y
+wget https://dl.strem.io/shell-linux/v4.4.116/stremio_4.4.116-1_amd64.deb
+cd ~
+
+#Install brave browser
+cd ~/DistroSetup
+sudo apt install apt-transport-https curl
+curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update
+sudo apt install brave-browser -y
+cd ~
+
+#Install Syncthing
+cd ~/DistroSetup/
+echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
+echo "deb https://apt.syncthing.net/ syncthing candidate" | sudo tee /etc/apt/sources.list.d/syncthing.list
+curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install syncthing -y
+cd ~
 
 #Install Wine
+cd ~/DistroSetup
 sudo dpkg --add-architecture i386
 wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
 #If you change the version of wine this is installing, there is a 90% chance this will work for other versions of the OS
 sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
 sudo apt update
 sudo apt install --install-recommends winehq-stable -y
+cd ~
 
 #Install rEFInd
 sudo apt-add-repository ppa:rodsmith/refind -y
@@ -71,18 +97,26 @@ mv ~/DistroSetup/.fonts ~/
 fc-cache -rv
 
 #Setup themes
+cd ~
+cd ~/DistroSetup
 sudo apt-get install dmz-cursor-theme -y
 git clone https://github.com/vinceliuice/Orchis-theme.git
-cd ~/Orchis-theme
+cd ~/DistroSetup/Orchis-theme
 ./install.sh
-cd
+
+cd ~
+cd ~/DistroSetup
 git clone https://github.com/vinceliuice/Tela-circle-icon-theme.git
-cd ~/Tela-circle-icon-theme
+cd ~/DistroSetup/Tela-circle-icon-theme
 ./install.sh -a
-cd
+
+cd ~
+cd ~/DistroSetup
 git clone https://github.com/vinceliuice/ChromeOS-theme.git
-cd ~/ChromeOS-theme
+cd ~/DistroSetup/ChromeOS-theme
 ./install.sh --color dark
+cd ~
+
 gsettings set org.gnome.desktop.interface cursor-theme 'DMZ-White'
 gsettings set org.gnome.desktop.interface gtk-theme 'Orchis-dark'
 gsettings set org.gnome.desktop.interface icon-theme 'Tela-circle-black-dark'
@@ -99,3 +133,4 @@ python3 -m webbrowser https://extensions.gnome.org/extension/779/clipboard-indic
 python3 -m webbrowser https://extensions.gnome.org/extension/1160/dash-to-panel/
 python3 -m webbrowser https://extensions.gnome.org/extension/19/user-themes/
 python3 -m webbrowser https://extensions.gnome.org/extension/1460/vitals/
+gnome-tweaks
