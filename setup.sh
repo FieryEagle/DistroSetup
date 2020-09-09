@@ -56,6 +56,7 @@ sudo apt install ~/DistroSetup/google-chrome-stable_current_amd64.deb -y
 sudo apt install ~/DistroSetup/teamviewer_amd64.deb -y
 sudo apt install ~/DistroSetup/Minecraft.deb -y
 wget https://dl.strem.io/shell-linux/v4.4.116/stremio_4.4.116-1_amd64.deb
+sudo apt install ~/DistroSetup/stremio_4.4.116-1_amd64.deb
 cd ~
 
 #Install brave browser
