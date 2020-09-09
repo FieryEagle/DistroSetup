@@ -43,6 +43,7 @@ sudo apt-get install gnome-tweaks -y
 sudo apt-get install qbittorrent -y
 sudo apt-get install speedtest-cli -y
 sudo apt-get install gstreamer1.0-libav -y
+sudo apt-get install htop -y
 wget -q https://packagecloud.io/AtomEditor/atom/gpgkey -O- | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main"
 sudo apt-get install atom -y
@@ -51,12 +52,12 @@ wget https://dl.discordapp.net/apps/linux/0.0.10/discord-0.0.10.deb -q
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -q
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb -q
 wget https://launcher.mojang.com/download/Minecraft.deb -q
-sudo apt install ~/DistroSetup/discord-0.0.10.deb -y
-sudo apt install ~/DistroSetup/google-chrome-stable_current_amd64.deb -y
-sudo apt install ~/DistroSetup/teamviewer_amd64.deb -y
-sudo apt install ~/DistroSetup/Minecraft.deb -y
+sudo apt-get install ~/DistroSetup/discord-0.0.10.deb -y
+sudo apt-get install ~/DistroSetup/google-chrome-stable_current_amd64.deb -y
+sudo apt-get install ~/DistroSetup/teamviewer_amd64.deb -y
+sudo apt-get install ~/DistroSetup/Minecraft.deb -y
 wget https://dl.strem.io/shell-linux/v4.4.116/stremio_4.4.116-1_amd64.deb
-sudo apt install ~/DistroSetup/stremio_4.4.116-1_amd64.deb
+sudo apt-get install ~/DistroSetup/stremio_4.4.116-1_amd64.deb
 cd ~
 
 #Install brave browser
@@ -64,8 +65,8 @@ cd ~/DistroSetup
 sudo apt install apt-transport-https curl
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt update
-sudo apt install brave-browser -y
+sudo apt-get update
+sudo apt-get install brave-browser -y
 cd ~
 
 #Install Syncthing
@@ -84,12 +85,12 @@ wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
 #If you change the version of wine this is installing, there is a 90% chance this will work for other versions of the OS
 sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
 sudo apt update
-sudo apt install --install-recommends winehq-stable -y
+sudo apt-get install --install-recommends winehq-stable -y
 cd ~
 
 #Install rEFInd
 sudo apt-add-repository ppa:rodsmith/refind -y
-sudo apt install refind -y
+sudo apt-get install refind -y
 sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/bobafetthotmail/refind-theme-regular/master/install.sh)"
 
 #Install fonts
