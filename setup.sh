@@ -29,6 +29,7 @@ libinput-gestures-setup start
 cd ~/DistroSetup/
 sudo apt-get update
 sudo apt-get purge firefox* -y
+sudo apt-get install github-desktop -y
 sudo apt-get install neofetch -y
 sudo apt-get install ruby -y
 sudo apt-get install python3-pip -y
@@ -90,6 +91,14 @@ cd ~
 sudo apt-add-repository ppa:rodsmith/refind -y
 sudo apt-get install refind -y
 sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/bobafetthotmail/refind-theme-regular/master/install.sh)"
+cd ~/DistroSetup
+sudo mv refind.conf /boot/efi/EFI/refind
+cd ~
+
+#Configure pulseaudio
+cd ~/DistroSetup
+sudo mv daemon.conf /etc/pulse
+cd ~
 
 #Install fonts
 sudo apt update
@@ -125,12 +134,42 @@ gsettings set org.gnome.desktop.interface icon-theme 'Tela-circle-black-dark'
 sudo apt-get update
 sudo apt-get upgrade -y
 
+#Install D2P
+cd ~/DistroSetup
+git clone https://github.com/home-sweet-gnome/dash-to-panel.git
+cd dash-to-panel
+make install
+cd ~
+
+#Install vitals
+sudo apt-get install gir1.2-gtop-2.0 lm-sensors -y
+cd ~/.local/share/gnome-shell/extensions/
+git clone https://github.com/corecoding/Vitals.git
+cd ~
+
+#Install caffeine
+cd ~/DistroSetup
+git clone git://github.com/eonpatapon/gnome-shell-extension-caffeine.git
+cd gnome-shell-extension-caffeine
+./update-locale.sh
+glib-compile-schemas --strict --targetdir=caffeine@patapon.info/schemas/ caffeine@patapon.info/schemas
+cp -r caffeine@patapon.info ~/.local/share/gnome-shell/extensions
+cd ~
+
+#Install clipboard
+cd ~/.local/share/gnome-shell/extensions/
+git clone https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator.git <extensions-dir>/clipboard-indicator@tudmotu.com
+cd ~
+
+#Install user-themes
+cd ~/DistroSetup
+mkdir /home/mihitmittal/.local/share/gnome-shell/extensions/user-theme@gnome-shell-extensions.gcampax.github.com
+cd /home/mihitmittal/.local/share/gnome-shell/extensions/user-theme@gnome-shell-extensions.gcampax.github.com
+wget https://extensions.gnome.org/extension-data/user-themegnome-shell-extensions.gcampax.github.com.v40.shell-extension.zip
+unzip user-themegnome-shell-extensions.gcampax.github.com.v40.shell-extension.zip
+rm user-themegnome-shell-extensions.gcampax.github.com.v40.shell-extension.zip
+cd ~
+
 #GNOME-extensions
-python3 -m webbrowser https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep
 python3 -m webbrowser https://vault.bitwarden.com
-python3 -m webbrowser https://extensions.gnome.org/extension/517/caffeine/
-python3 -m webbrowser https://extensions.gnome.org/extension/779/clipboard-indicator/
-python3 -m webbrowser https://extensions.gnome.org/extension/1160/dash-to-panel/
-python3 -m webbrowser https://extensions.gnome.org/extension/19/user-themes/
-python3 -m webbrowser https://extensions.gnome.org/extension/1460/vitals/
 gnome-tweaks
