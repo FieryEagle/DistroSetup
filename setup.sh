@@ -19,8 +19,6 @@ cd ~
 cd ~/DistroSetup/gestures
 sudo python3 setup.py install
 cd ~
-libinput-gestures-setup autostart
-libinput-gestures-setup start
 
 #Copy over config file and set libinput to start
 mv ~/DistroSetup/libinput-gestures.conf ~/.config/
