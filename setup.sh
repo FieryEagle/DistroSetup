@@ -14,11 +14,11 @@ sudo apt-get install libinput-tools -y
 sudo apt-get install python-gobject -y
 cd ~
 cd ~/DistroSetup/libinput-gestures
-cd ~
 sudo make install
-cd ~/DistroSetup/gestures
 cd ~
+cd ~/DistroSetup/gestures
 sudo python3 setup.py install
+cd ~
 libinput-gestures-setup autostart
 libinput-gestures-setup start
 
@@ -57,7 +57,7 @@ sudo apt-get install ~/DistroSetup/google-chrome-stable_current_amd64.deb -y
 sudo apt-get install ~/DistroSetup/teamviewer_amd64.deb -y
 sudo apt-get install ~/DistroSetup/Minecraft.deb -y
 wget https://dl.strem.io/shell-linux/v4.4.116/stremio_4.4.116-1_amd64.deb
-sudo apt-get install ~/DistroSetup/stremio_4.4.116-1_amd64.deb
+sudo apt-get install ~/DistroSetup/stremio_4.4.116-1_amd64.deb -y
 cd ~
 
 #Install brave browser
