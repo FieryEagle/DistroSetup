@@ -161,6 +161,13 @@ cd ~/.local/share/gnome-shell/extensions/
 git clone https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator.git <extensions-dir>/clipboard-indicator@tudmotu.com
 cd ~
 
+#Install Volume mixer
+cd ~/DistroSetup
+git clone https://github.com/aleho/gnome-shell-volume-mixer.git
+cd gnome-shell-volume-mixer
+make
+cd ~
+
 #Install user-themes
 cd ~/DistroSetup
 mkdir /home/mihitmittal/.local/share/gnome-shell/extensions/user-theme@gnome-shell-extensions.gcampax.github.com
