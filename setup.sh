@@ -146,8 +146,7 @@ cd ~
 
 #Install vitals
 sudo apt-get install gir1.2-gtop-2.0 lm-sensors -y
-cd ~/.local/share/gnome-shell/extensions/
-git clone https://github.com/corecoding/Vitals.git
+git clone https://github.com/corecoding/Vitals.git ~/.local/share/gnome-shell/extensions/Vitals@CoreCoding.com
 cd ~
 
 #Install caffeine
@@ -160,15 +159,11 @@ cp -r caffeine@patapon.info ~/.local/share/gnome-shell/extensions
 cd ~
 
 #Install clipboard
-cd ~/.local/share/gnome-shell/extensions/
-git clone https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator.git <extensions-dir>/clipboard-indicator@tudmotu.com
+git clone https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator.git ~/.local/share/gnome-shell/extensions/clipboard-indicator@tudmotu.com
 cd ~
 
 #Install Volume mixer
-cd ~/DistroSetup
-git clone https://github.com/aleho/gnome-shell-volume-mixer.git
-cd gnome-shell-volume-mixer
-make
+git clone https://github.com/aleho/gnome-shell-volume-mixer.git ~/.local/share/gnome-shell/extensions/shell-volume-mixer@derhofbauer.at
 cd ~
 
 #Install user-themes
