@@ -29,6 +29,7 @@ libinput-gestures-setup start
 cd ~/DistroSetup/
 sudo apt-get update
 sudo apt-get purge firefox* -y
+sudo apt-get install tlp -y
 sudo apt-get install github-desktop -y
 sudo apt-get install neofetch -y
 sudo apt-get install ruby -y
@@ -63,13 +64,13 @@ sudo apt-get install ~/DistroSetup/stremio_4.4.116-1_amd64.deb -y
 cd ~
 
 #Install brave browser
-cd ~/DistroSetup
-sudo apt install apt-transport-https curl
-curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
-echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt-get update
-sudo apt-get install brave-browser -y
-cd ~
+#cd ~/DistroSetup
+#sudo apt install apt-transport-https curl
+#curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+#echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+#sudo apt-get update
+#sudo apt-get install brave-browser -y
+#cd ~
 
 #Install Syncthing
 cd ~/DistroSetup/
