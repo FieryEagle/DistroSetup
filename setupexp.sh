@@ -1,8 +1,6 @@
 echo Setup started
 #Install Gestures
-sudo add-apt-repository ppa:apt-fast/stable -y
-sudo apt-get update
-sudo apt-get -y install apt-fast -y
+/bin/bash -c "$(curl -sL https://git.io/vokNn)"
 sudo gpasswd -a $USER input
 cd /home/$USER/DistroSetup
 git clone https://github.com/bulletmark/libinput-gestures.git
