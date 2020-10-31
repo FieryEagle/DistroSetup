@@ -1,5 +1,6 @@
 # DistroSetup
 Sets up Ubuntu to be to my preference (Ubuntu 20.10 ONLY)
+
 Very shittly made, only for personal use. If you look at the code and think, "There's a much better way to do this", trust me, I know
 
 Install instructions
