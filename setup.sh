@@ -45,19 +45,15 @@ sudo apt-fast install htop -y
 sudo apt-fast install ratbagd -y
 sudo apt-fast install piper -y
 sudo apt-fast install telegram-desktop -y
-wget https://packagecloud.io/AtomEditor/atom/gpgkey -O- | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" -y
 sudo add-apt-repository ppa:ubuntu-mozilla-daily/ppa -y
 sudo apt-get update
 sudo apt-get install firefox-trunk
 wget https://dl.discordapp.net/apps/linux/0.0.10/discord-0.0.10.deb
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget https://launcher.mojang.com/download/Minecraft.deb
-wget https://dl.strem.io/shell-linux/v4.4.116/stremio_4.4.116-1_amd64.deb
 sudo apt-fast install /home/$USER/DistroSetup/discord*.deb -y
 sudo apt-fast install /home/$USER/DistroSetup/google-chrome-stable_current_amd64.deb -y
 sudo apt-fast install /home/$USER/DistroSetup/Minecraft.deb -y
-sudo apt-fast install /home/$USER/DistroSetup/stremio_4.4.116-1_amd64.deb -y
 
 #Install Syncthing
 echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
@@ -71,16 +67,15 @@ sudo dpkg --add-architecture i386
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
 sudo apt-key add winehq.key
 #If you change the version of wine this is installing, there is a 90% chance this will work for other versions of the OS
-sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/groovy main'
+sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ hirsute main'
 sudo apt-fast update
 sudo apt-fast install --install-recommends winehq-stable -y
 
 #Install rEFInd
-#sudo apt-add-repository ppa:rodsmith/refind -y
-#sudo apt-fast install refind -y
-#sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/bobafetthotmail/refind-theme-regular/master/install.sh)"
-#sudo mv /home/$USER/DistroSetup/refind.conf /boot/efi/EFI/refind
-sudo mv /home/$USER/DistroSetup/refind /boot/efi/EFI
+sudo apt-add-repository ppa:rodsmith/refind -y
+sudo apt-fast install refind -y
+sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/bobafetthotmail/refind-theme-regular/master/install.sh)"
+sudo mv /home/$USER/DistroSetup/refind.conf /boot/efi/EFI/refind
 
 #Configure pulseaudio
 sudo mv /home/$USER/DistroSetup/daemon.conf /etc/pulse
